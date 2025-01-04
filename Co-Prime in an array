@@ -1,0 +1,26 @@
+def gcd(a, b):
+    # Function to compute the GCD of two numbers
+    while b:
+        a, b = b, a % b
+    return a
+
+def count_coprime_pairs(arr):
+    # Remove duplicates from the array
+    unique_numbers = list(set(arr))
+    n = len(unique_numbers)
+    count = 0
+    
+    # Iterate through all unique pairs
+    for i in range(n):
+        for j in range(i + 1, n):
+            if gcd(unique_numbers[i], unique_numbers[j]) == 1:
+                count += 1
+    
+    return count
+
+# Input
+n = int(input())
+arr = list(map(int, input().split()))
+
+# Output
+print(count_coprime_pairs(arr))

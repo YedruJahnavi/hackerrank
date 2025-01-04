@@ -1,0 +1,27 @@
+from itertools import combinations
+
+def count_triangles(nums):
+    n = len(nums)
+    
+    # If there are fewer than 3 elements, no triangle can be formed
+    if n < 3:
+        return -1
+    
+    # Sort the array to simplify the triangle condition check
+    nums.sort()
+    
+    count = 0
+    # Iterate through all combinations of three different elements
+    for a, b, c in combinations(nums, 3):
+        if a + b > c:  # Triangle inequality check
+            count += 1
+    
+    return count
+
+# Input processing
+n = int(input())  # Read the number of elements
+nums = list(map(int, input().split()))  # Read the list of numbers
+
+# Calculate the number of possible triangles and print it
+result = count_triangles(nums)
+print(result)

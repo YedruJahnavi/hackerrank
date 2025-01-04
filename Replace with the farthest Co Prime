@@ -1,0 +1,23 @@
+import math
+
+def farthest_coprime(n):
+    farthest = None
+    max_distance = -1
+    
+    for y in range(2, 251):
+        if math.gcd(n, y) == 1:  # Check if coprime
+            distance = abs(n - y)
+            if distance > max_distance:
+                max_distance = distance
+                farthest = y
+    
+    return farthest
+
+# Input reading
+input_numbers = list(map(int, input().split()))
+
+# Calculate farthest coprime for each number
+result = [farthest_coprime(num) for num in input_numbers]
+
+# Print the result
+print(" ".join(map(str, result)))

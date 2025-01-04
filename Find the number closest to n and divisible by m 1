@@ -1,0 +1,22 @@
+def closest_multiple(n, m):
+    if n % m == 0:
+        return n  # If n is divisible by m, return n itself
+    
+    # Calculate the two closest multiples
+    lower = (n // m) * m
+    upper = ((n // m) + 1) * m
+    
+    # Determine which of the two is closer
+    if abs(n - lower) > abs(n - upper):
+        return upper
+    elif abs(n - lower) < abs(n - upper):
+        return lower
+    else:
+        # If both are equally distant, return the one with the maximum absolute value
+        return upper if abs(upper) > abs(lower) else lower
+
+# Input: Two integers n and m
+n, m = map(int, input().split())
+
+# Output the closest multiple
+print(closest_multiple(n, m))

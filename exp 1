@@ -1,0 +1,53 @@
+Exp 1 Lab on web services  
+
+
+To develop and deploy a simple web service using Python Flask framework and access it through 
+a web browser. 
+
+Software Requirements 
+
+• Windows 10/11/Ubuntu 
+• Python 3.x 
+• Flask Library 
+• Web Browser (Chrome/Edge) 
+A web service is a software system designed to support communication between applications 
+over a network using HTTP protocol. Flask is a lightweight web framework in Python that 
+allows us to create web services easily. 
+
+Procedure 
+
+1. Install Python software. 
+2. Install Flask library using pip command. 
+3. Create a Python file named webservice.py. 
+4. Write Flask web service code. 
+5. Run the program using command prompt. 
+6. Open browser and access the URLs. 
+7. Observe the output. 
+
+Program 
+
+from flask import Flask 
+app = Flask(__name__) 
+@app.route('/') 
+def home(): 
+return "Hello! This is my first Cloud Web Service" 
+@app.route('/student') 
+def student(): 
+return "Welcome Student to Cloud Lab" 
+if __name__ == '__main__': 
+app.run(debug=True 
+
+
+
+Output 
+When the server runs: 
+Running on http://127.0.0.1:5000/ 
+Browser Output: 
+URL 1: 
+http://127.0.0.1:5000/ 
+Output: 
+Hello! This is my first Cloud Web Service 
+URL 2: 
+http://127.0.0.1:5000/student 
+Output: 
+Welcome Student to Cloud Lab

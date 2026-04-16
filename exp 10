@@ -1,0 +1,28 @@
+Exp – 10 
+
+Aim 
+
+To launch a virtual machine using TryStack (Online OpenStack Demo Platform). 
+OpenStack is an open-source cloud platform used to create and manage virtual machines. TryStack 
+provides a free online environment to practice OpenStack without installing any software locally. 
+It allows users to launch instances (virtual machines) using the Horizon dashboard. 
+
+Procedure 
+
+1. Open the TryStack website in a browser.  
+2. Register for a TryStack account.  
+3. Login to the OpenStack Horizon dashboard.  
+4. Navigate to: Compute → Instances 
+5. Click on Launch Instance.  
+6. Enter instance name and details.  
+7. Select an image (Ubuntu Linux).  
+8. Choose a flavor (RAM, CPU, storage).  
+9. Configure network settings.  
+10. Click Launch.  
+11. Wait until instance status becomes Running.  
+12. Click Console to access the virtual machine.  
+
+Output 
+
+The virtual machine is launched successfully and the console displays the operating system 
+interface. 
